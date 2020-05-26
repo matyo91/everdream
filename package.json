@@ -1,0 +1,8 @@
+{
+  "name": "mateafox",
+  "private": true,
+  "homepage": "https://mateafox.com",
+  "devDependencies": {
+    "lerna": "^3.20.2"
+  }
+}

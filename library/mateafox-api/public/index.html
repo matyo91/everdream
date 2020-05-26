@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Mateafox Api</title>
+</head>
+<body>
+    <div class="container">
+        <div class="py-5 text-center">
+            <img class="d-block mx-auto mb-4" src="/icons/icon-512x512.png" alt="Mateafox API" width="72" height="72">
+            <h2 id="title">Mateafox API</h2>
+            <p><small>From <a href="https://mateafox.com">https://mateafox.com</a></small></p>
+        </div>
+    </div>
+    <script type="application/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+            var req = new XMLHttpRequest();
+            req.overrideMimeType("application/json");
+            req.onload  = function() {
+                var data = JSON.parse(req.responseText);
+                var title = `Mateafox API ${data.version}`
+                document.title = title
+                document.getElementById('title').innerText = title
+            };
+            req.open("GET", '/api/version');
+            req.send();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+# logs
+/*.log
+
+# npm
+/node_modules
+
+# dotenv
+/.env.*
+
+# typescript
+/dist
+/database.sqlite
+oclif.manifest.json
