@@ -5,7 +5,7 @@ import ArticleItem from './articleItem'
 const Blog = () => (
   <>
     <section className="section container-fluid">
-      <h3>Blog</h3>
+      {/*<h3>Blog</h3>*/}
       <StaticQuery
         query={graphql`
           query ArticlesQuery {
